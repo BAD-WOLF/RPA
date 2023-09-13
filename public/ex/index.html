@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de RPA de Pagamento</title>
+    <link rel="stylesheet" href="style/input/index.css">
+</head>
+<body>
+    <h1>Formulário de RPA de Pagamento</h1>
+    <form id="payment-form" action="#" method="post">
+        <fieldset>
+            <legend>Dados do Beneficiário</legend>
+            <label for="payee-name">Nome do Beneficiário:</label>
+            <input type="text" id="payee-name" name="payee-name" required><br><br>
+            
+            <label for="payee-tax-id">ID Fiscal do Beneficiário:</label>
+            <input type="text" id="payee-tax-id" name="payee-tax-id" required><br><br>
+            
+            <label for="payee-address">Endereço do Beneficiário:</label>
+            <input type="text" id="payee-address" name="payee-address" required><br><br>
+            
+            <label for="payee-email">Email do Beneficiário:</label>
+            <input type="email" id="payee-email" name="payee-email" required><br><br>
+            
+            <label for="payee-phone">Telefone do Beneficiário:</label>
+            <input type="tel" id="payee-phone" name="payee-phone" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Dados Bancários</legend>
+            <label for="bank-name">Nome do Banco:</label>
+            <input type="text" id="bank-name" name="bank-name" required><br><br>
+            
+            <label for="bank-address">Endereço do Banco:</label>
+            <input type="text" id="bank-address" name="bank-address" required><br><br>
+            
+            <label for="bank-swift">Código SWIFT/BIC do Banco:</label>
+            <input type="text" id="bank-swift" name="bank-swift" required><br><br>
+            
+            <label for="bank-account-number">Número da Conta Bancária:</label>
+            <input type="text" id="bank-account-number" name="bank-account-number" required><br><br>
+            
+            <label for="bank-routing-number">Número de Roteamento:</label>
+            <input type="text" id="bank-routing-number" name="bank-routing-number" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Detalhes do Pagamento</legend>
+            <label for="payment-amount">Valor do Pagamento:</label>
+            <input type="number" id="payment-amount" name="payment-amount" min="0.01" step="0.01" required><br><br>
+            
+            <label for="payment-currency">Moeda:</label>
+            <select id="payment-currency" name="payment-currency" required>
+                <option value="USD">Dólar Americano (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="JPY">Iene Japonês (JPY)</option>
+                <!-- Adicione mais opções de moedas conforme necessário -->
+            </select><br><br>
+            
+            <label for="payment-date">Data do Pagamento:</label>
+            <input type="date" id="payment-date" name="payment-date" required><br><br>
+            
+            <label for="payment-purpose">Finalidade do Pagamento:</label>
+            <textarea id="payment-purpose" name="payment-purpose" rows="4" required></textarea><br><br>
+            
+            <label for="payment-reference">Referência de Pagamento:</label>
+            <input type="text" id="payment-reference" name="payment-reference"><br><br>
+            
+            <label for="payment-method">Método de Pagamento:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Cartão de Crédito</option>
+                <option value="bank-transfer">Transferência Bancária</option>
+                <option value="paypal">PayPal</option>
+                <!-- Adicione mais opções de métodos de pagamento conforme necessário -->
+            </select><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Enviar Pagamento">
+        <a type="test" href="https://c5fd-2804-7f7-a089-c86d-ff8a-163f-27ca-30fe.ngrok-free.app/boleto.html">Test: Boleto??</a>
+    </form>
+</body>
+</html>
