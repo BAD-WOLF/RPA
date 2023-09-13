@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <ul class="feature-list">
+            {% for key, content_row in content %}
+                <li class="animated fadeIn">
+                    <div class="topic">{{ key }}</div>
+                    <div class="content animated slideIn">{{ content_row }}</div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
